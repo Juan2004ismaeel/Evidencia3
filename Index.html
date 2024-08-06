@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><A-Spaces></A-Spaces></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="./IMG/logo.png" alt="logos">
+        <div class="logo">A-SPACE</div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showDefinition('callback')">Callback</a></li>
+                <li><a href="#" onclick="showDefinition('promise')">Promise</a></li>
+                <li><a href="#" onclick="showDefinition('async')">Async</a></li>
+                <li><a href="#" onclick="showDefinition('await')">Await</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="pokemonInput" placeholder="Enter Pokémon name">
+            <button onclick="fetchPokemon()">Search</button>
+        </div>
+    </header>
+    <section class="hero">
+        <h1>INTRODUCTION</h1>
+        <p>In JavaScript programming, managing operations that do not complete immediately is essential. Callbacks allow you to execute functions after an asynchronous task completes, although they can complicate the code if overused. Promises improve this handling by representing the result of a task and allowing for clearer chaining of operations. With `async` and `await` functions, asynchronous programming is further simplified, as `async` allows functions to automatically return promises, and `await` pauses execution until the promise resolves, making the code more readable and manageable.</p>
+        <button onclick="getStarted(); fetchPokemon();">Get Started</button>
+        <div id="getStartedOutput"></div>
+    </section>
+    <section class="info">
+        <div class="info-card" onclick="showDefinition('callback')">
+            <h3>CALLBACKS</h3>
+            <p>Functions passed as arguments to other functions to be executed later.</p>
+        </div>
+        <div class="info-card" onclick="showDefinition('promise')">
+            <h3>PROMISES</h3>
+            <p>Objects representing the eventual completion or failure of an asynchronous operation.</p>
+        </div>
+        <div class="info-card" onclick="showDefinition('async')">
+            <h3>ASYNC</h3>
+            <p>Functions that return a promise and can use `await` inside them.</p>
+        </div>
+        <div class="info-card" onclick="showDefinition('await')">
+            <h3>AWAIT</h3>
+            <p>Pauses the execution of an `async` function until the promise resolves.</p>
+        </div>
+        <div id="infoOutput"></div>
+    </section>
+    <section class="mission">
+        <h2>OUR MISSION</h2>
+        <div class="mission-content black-box">
+            <div class="text-container">
+                <h3>RAPIDSCAT</h3>
+                <p>Improve weather forecasting on Earth, provide cross-calibration for all international satellites that monitor ocean winds, and improve estimates of how ocean winds change throughout the day, around the globe.</p>
+                <button onclick="fetchPokemon()">View All</button>
+                <div id="viewAllOutput"></div>
+            </div>
+            <div class="image-container">
+                <img src="./IMG/SpX_CRS-1_berthed_-_cropped.jpg" alt="RAPIDSCAT Image">
+            </div>
+        </div>
+    </section>
+    <section class="function">
+        <h2>FUNCTION</h2>
+        <div class="function-content black-box">
+            <div class="image-container">
+                <img src="./IMG/pexels-spacex-23789.jpeg" alt="Satellite Image">
+            </div>
+            <div class="text-container">
+                <h3>SATELLITE</h3>
+                <p>Gives light at night. Affects the balance of sea water. Transmit television signals, cell phones, and the internet. Transmits and receives communication signals.</p>
+                <button onclick="fetchPokemon()">View All</button>
+                <button onclick="fetchPokemon()">Submit</button>
+                <div id="submitOutput"></div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Technology Created by Agus Salman Web Design ©2022 Supported by A-SPACE</p>
+    </footer>
+    
+    <!-- Card Overlay for Pokémon Info -->
+    <div id="pokemonCard" class="pokemon-card">
+        <div class="card-content">
+            <button class="close-btn" onclick="closeCard()">X</button>
+            <div id="pokemonOutput"></div>
+        </div>
+    </div>
+    
+    <!-- Definition Overlay -->
+    <div id="definitionCard" class="definition-card">
+        <div class="card-content">
+            <button class="close-btn" onclick="closeDefinitionCard()">X</button>
+            <div id="definitionOutput"></div>
+        </div>
+    </div>
+
+    <script src="./DISEÑO/scripts.js"></script>
+</body>
+</html>
